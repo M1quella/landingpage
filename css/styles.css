@@ -1,0 +1,115 @@
+/*****************************
+BASIC STYLES
+******************************/
+
+body {
+    margin: 0;
+    padding: 20px; /* Pushes content away from the edges of the browser */
+    background: white; /* Background color */
+    font-family: sans-serif; /* Sets font family for entire page, unless you declare something else below */
+  }
+  
+  /* Typography */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: black; /* Color for all headers */
+  }
+  
+  /* Links */
+  a {
+    color: black;
+    text-decoration: none; /* Removes underline from hyperlinks */
+  }
+  
+  /* Hover effects */
+  a:hover {
+    color: white;
+  }
+  
+  /*****************************
+  GRID CONTAINER
+  ******************************/
+  .container {
+    display: grid; /* Don't delete this line */
+    grid-template-columns: repeat(12, 1fr); /* Sets up 12 equal columns */
+    grid-gap: 10px; /* Sets gap between sections */
+  }
+  
+  /*****************************
+  ALL SECTIONS 
+  This targets all <section> elements regardless of class. 
+  ******************************/
+  section {
+    padding: 15px;
+    background: linear-gradient(#ffe5e3);
+  }
+  
+  /*****************************
+  INDIVIDUAL SECTIONS 
+  Change the class names to fit your content (e.g. ".header" or ".bio") and delete anything you don't need.
+  ******************************/
+  .one {
+    grid-column: span 12; /* Spans full width of 12 column container */
+    height: 100px;
+     border: 8px solid black;
+     text-align: center;
+  }
+  
+  .two {
+    display: auto;
+    grid-column: span 3; /* Spans 4 columns (out of 12) */
+     border: 8px solid black;
+  }
+
+  .imagetbh {
+    grid-column: span 6;
+   }
+
+  .three {
+    
+  
+    /* The following three lines center the content INSIDE the section vertically and horizontally. Handy!
+    Read more about Flex here: https://internetingishard.com/html-and-css/flexbox/ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  }
+  
+  .four {
+    grid-column: span 3;
+    height: 675px; /* Manually sets the height, otherwise the height will be determined by the tallest content in the grid row. */
+    border: 8px solid black;
+    
+  }
+  
+  /* With 12 columns, there are 13 vertical lines defining them;
+  this tells the element to go from 2 to 7 */
+  .five {
+    grid-column: 2 / 7; /* Instead of defining the size with "span" this section begins at column-line-3 and ends at column-line-11 (note that 12 columns create 13 column-lines between the columns) */
+    text-align: center; /* Centers the text horizontally */
+     border: 8px solid black;
+  }
+  
+  .six {
+    grid-column: span 5;
+    border: 8px solid black;
+    text-align: center;
+  }
+  /*****************************
+   FOR MOBILE DEVICES:
+   When the browser is smaller than 600px wide,
+   all sections become 12 columns wide (full width).
+   TRY RESIZING YOUR BROWSER TO SEE THIS IN ACTION.
+   ******************************/
+  @media (max-width: 600px) {
+    .container section {
+      grid-column: span 12;
+    }
+  }
+
