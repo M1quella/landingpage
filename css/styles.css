@@ -83,7 +83,7 @@ body {
   
   .four {
     grid-column: span 3;
-    height: 675px; /* Manually sets the height, otherwise the height will be determined by the tallest content in the grid row. */
+    /*height: 675px; /* Manually sets the height, otherwise the height will be determined by the tallest content in the grid row. */
     border: 8px solid black;
     
   }
